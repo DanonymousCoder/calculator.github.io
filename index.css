@@ -35,3 +35,9 @@ form .display {
     margin: 20px 0;
     justify-content: flex-end;
 }
+form .display input {
+    flex: 1;
+    box-shadow: none;
+    font-size: 45px;
+    text-align: right;
+}
