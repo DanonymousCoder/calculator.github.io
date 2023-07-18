@@ -30,3 +30,8 @@
     cursor: pointer;
     margin: 10px;
 }
+form .display {
+    display: flex;
+    margin: 20px 0;
+    justify-content: flex-end;
+}
