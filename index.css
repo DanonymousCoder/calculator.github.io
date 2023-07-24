@@ -1,4 +1,9 @@
 .body {
     align-items: center;
     background-color: #78C1F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    margin: 50px;
 }
