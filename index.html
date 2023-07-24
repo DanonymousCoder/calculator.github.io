@@ -9,26 +9,26 @@
     <div class="container" id="typing-text">
     </div>
 
-  <script>
-    // Text to be typed out
-    const textToType = "Welcome to Ridwanullah's web calculator.";
+        <script>
+            // Text to be typed out
+            const textToType = "Welcome to Ridwanullah's web calculator.";
 
-    // Get the typing-text div
-    const typingDiv = document.getElementById("typing-text");
+            // Get the typing-text div
+            const typingDiv = document.getElementById("typing-text");
 
-    // Function to simulate typing effect
-    function typeText(text, index, interval) {
-      if (index < text.length) {
-        typingDiv.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(() => {
-          typeText(text, index, interval);
-        }, interval);
-      }
-    }
+            // Function to simulate typing effect
+            function typeText(text, index, interval) {
+            if (index < text.length) {
+                typingDiv.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(() => {
+                typeText(text, index, interval);
+                }, interval);
+            }
+            }
 
-    // Initial call to start the typing effect
-    typeText(textToType, 0, 100); // Adjust the interval (in milliseconds) to control the typing speed
-  
+            // Initial call to start the typing effect
+            typeText(textToType, 0, 100); // Adjust the interval (in milliseconds) to control the typing speed
+  </script>
 </body>
 </html>
