@@ -8,31 +8,30 @@
 </head>
 <body>
     <div class="body">
-        <div class="container" id="typing-text">
-        </div>
-        <p>Click the button to begin</p>
+        <p class="container" id="typing-text">Welcome to Ridwanullah's web calculator.
+        </p>
+        <p class="sub">Click the button to begin</p>
         <a href="calc.html" class="button">Start your journey</a>
    </div>
-        <script>
-            // Text to be typed out
-            const textToType = "Welcome to Ridwanullah's web calculator.";
+   <script>
+    // Get the typing-text div
+    const typingDiv = document.getElementById("typing-text");
+    const textToType = typingDiv.innerText;
+    typingDiv.innerText = ""; // Clear the text inside the div to display it with the typing effect
 
-            // Get the typing-text div
-            const typingDiv = document.getElementById("typing-text");
+    // Function to simulate typing effect
+    function typeText(text, index, interval) {
+      if (index < text.length) {
+        typingDiv.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(() => {
+          typeText(text, index, interval);
+        }, interval);
+      }
+    }
 
-            // Function to simulate typing effect
-            function typeText(text, index, interval) {
-            if (index < text.length) {
-                typingDiv.innerHTML += text.charAt(index);
-                index++;
-                setTimeout(() => {
-                typeText(text, index, interval);
-                }, interval);
-            }
-            }
-
-            // Initial call to start the typing effect
-            typeText(textToType, 0, 100); // Adjust the interval (in milliseconds) to control the typing speed
-        </script>
+    // Initial call to start the typing effect
+    typeText(textToType, 0, 100); // Adjust the interval (in milliseconds) to control the typing speed
+  </script>
 </body>
 </html>
