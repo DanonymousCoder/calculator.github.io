@@ -11,6 +11,7 @@
 .sub {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: blue;
+    margin-top: 0;
 }
 .body a.button {
     background-color: #F8FDCF;
@@ -21,4 +22,5 @@
 .container {
     font-size: 30px;
     color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
